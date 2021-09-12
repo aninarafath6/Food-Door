@@ -1,6 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:food_door/src/constants/app_colors.dart';
 import 'package:food_door/src/constants/app_images.dart';
 import 'package:food_door/src/utils/dimensions.dart';
@@ -19,6 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
+    // redirecting to onboarding screen after 3 seconds
     Timer(
         const Duration(milliseconds: 3000),
         () => Navigator.of(context).push(
@@ -28,6 +29,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // setting status bar color to transparent
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    );
     return Scaffold(
       backgroundColor: AppColors.PRIMARY_COLOR,
       body: Stack(
