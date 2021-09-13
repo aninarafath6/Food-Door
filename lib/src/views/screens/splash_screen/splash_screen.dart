@@ -22,8 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
     // redirecting to onboarding screen after 3 seconds
     Timer(
         const Duration(milliseconds: 3000),
-        () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const OnboardingScreen())));
+        () => Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => OnboardingScreen())));
     super.initState();
   }
 
