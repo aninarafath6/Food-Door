@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
     );
     return Scaffold(
-      backgroundColor: AppColors.PRIMARY_COLOR,
+      backgroundColor: AppColors.primaryColor,
       body: Stack(
         children: <Widget>[
           //background overlay image

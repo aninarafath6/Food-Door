@@ -1,6 +1,7 @@
-import 'package:flutter/painting.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color PRIMARY_COLOR = Color(0xff0a8791);
-  static const Color LIGHT_GREEN = Color(0x310A8891);
+  static const Color primaryColor = Color(0xFF0A8791);
+  static const Color lightGreenColor = Color(0x310A8891);
+  static const Color lightGreyColor = Color(0xCEDCDCDC);
 }

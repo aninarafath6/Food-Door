@@ -2,9 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:food_door/src/models/onboarding_model.dart';
 
 class OnboardingProvider with ChangeNotifier {
-  
   // getting the onboarding data length
   int get dataLength => onboardingData.length;
+
+  // page controller
+  final PageController pageController = PageController();
+
+  // current page
+  int currentPage = 0;
+
+  // next page
+  void nextPage() {
+    if (currentPage == dataLength - 1) {
+      // go to home screen
+    } else {
+      // changing page to next
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 3000),
+        curve: Curves.ease,
+      );
+    }
+    notifyListeners();
+  }
+
+  // change page
+  void changePage(int index) {
+    currentPage = index;
+    notifyListeners();
+  }
 
   // hart coded onboarding data
   List<OnboardingModel> onboardingData = [
