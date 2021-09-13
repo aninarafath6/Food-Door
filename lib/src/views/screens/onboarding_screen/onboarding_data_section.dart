@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_door/src/constants/app_colors.dart';
 import 'package:food_door/src/constants/app_sizes.dart';
 import 'package:food_door/src/providers/onboarding_provider.dart';
 import 'package:food_door/src/utils/dimensions.dart';
@@ -95,5 +96,6 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
       GoogleFonts.poppins(
         fontSize: getHeight(context, size),
         fontWeight: weight,
+        color:AppColors.defaultBlack,
       );
 }

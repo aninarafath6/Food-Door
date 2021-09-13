@@ -5,6 +5,7 @@ import 'package:food_door/src/utils/dimensions.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
+// page indicator sild
 class OnboardingPagingIndicator extends StatelessWidget with Dimensions {
   const OnboardingPagingIndicator({Key? key}) : super(key: key);
 
@@ -13,10 +14,12 @@ class OnboardingPagingIndicator extends StatelessWidget with Dimensions {
     return Row(
       //row alignment
       mainAxisAlignment: MainAxisAlignment.center,
+      // generated list of indicators for the slides
       children: List.generate(
         context.read<OnboardingProvider>().dataLength,
         // indicator
         (index) => Container(
+          // margins
           margin: EdgeInsets.symmetric(
             horizontal: 2,
             vertical: getHeight(context, 3),
@@ -24,9 +27,10 @@ class OnboardingPagingIndicator extends StatelessWidget with Dimensions {
           height: 8,
           width: 20,
           decoration: BoxDecoration(
+            // if the index is the same as the current slide, show a filled primary color
             color: context.watch<OnboardingProvider>().currentPage == index
-                ? AppColors.primaryColor
-                : AppColors.lightGreyColor,
+                ? AppColors.primary
+                : AppColors.lightGrey,
             // radius for circular shape
             borderRadius: BorderRadius.circular(10),
           ),

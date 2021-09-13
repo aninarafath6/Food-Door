@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:food_door/src/models/onboarding_model.dart';
 
 class OnboardingProvider with ChangeNotifier {
+  // duration
   // getting the onboarding data length
   int get dataLength => onboardingData.length;
 
@@ -11,6 +13,9 @@ class OnboardingProvider with ChangeNotifier {
   // current page
   int currentPage = 0;
 
+  // is last page
+  bool get isLastPage =>  dataLength - 1 ==currentPage;
+
   // next page
   void nextPage() {
     if (currentPage == dataLength - 1) {
@@ -18,10 +23,20 @@ class OnboardingProvider with ChangeNotifier {
     } else {
       // changing page to next
       pageController.nextPage(
-        duration: const Duration(milliseconds: 3000),
+        duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
       );
     }
+    notifyListeners();
+  }
+
+  // skip page
+  void skipPage() {
+    pageController.animateToPage(
+      dataLength - 1,
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.decelerate,
+    );
     notifyListeners();
   }
 
