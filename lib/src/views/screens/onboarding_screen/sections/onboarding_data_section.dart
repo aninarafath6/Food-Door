@@ -18,6 +18,9 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
         //  controller
         controller: context.read<OnboardingProvider>().pageController,
 
+        // scroll behavior
+        scrollBehavior: _PageScrollBehavior(),
+
         // on page changed
         onPageChanged:
             context.read<OnboardingProvider>().changePage,
@@ -97,4 +100,12 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
         fontWeight: weight,
         color: AppColors.defaultBlack,
       );
+}
+
+class _PageScrollBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
+  }
 }

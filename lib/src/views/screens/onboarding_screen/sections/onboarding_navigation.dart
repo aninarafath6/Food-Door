@@ -23,57 +23,55 @@ class OnboardingNavigation extends StatelessWidget with Dimensions {
       ),
 
       // is last page ? then show the button to go to the login screen : else show the button to go to the next page
-      child: Consumer<OnboardingProvider>(
-        builder: (context, value,_) {
-          return value.isLastPage
-              // get started button
-              ? TextButton(
-                  // button style
-                  style: ButtonStyle(
-                    padding: MaterialStateProperty.all(
-                      EdgeInsets.symmetric(
-                        horizontal: getWidth(context, 20),
-                        vertical: 3,
+      child: Consumer<OnboardingProvider>(builder: (context, value, _) {
+        return value.isLastPage
+            // get started button
+            ? TextButton(
+                // button style
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all(
+                    EdgeInsets.symmetric(
+                      horizontal: getWidth(context, 20),
+                      vertical: 5,
+                    ),
+                  ),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(AppColors.primary),
+                ),
+                onPressed: () {},
+                child: Text(
+                  'Get Started',
+                  // button text style
+                  style: _textStyle(color: Colors.white),
+                ),
+              )
+            : Row(
+                // row alignment
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  // skip button
+                  GestureDetector(
+                    onTap: () => value.skipPage(),
+                    child: Text(
+                      // text transforming into uppercase
+                      'Skip'.toUpperCase(),
+                      // applying text style
+                      style: _textStyle(
+                        color: AppColors.textGrey,
                       ),
                     ),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(AppColors.primary),
                   ),
-                  onPressed: () {},
-                  child: Text(
-                    'Get Started',
-                    // button text style
-                    style: _textStyle(color: Colors.white),
+                  // next button
+                  CircleButton(
+                    text: 'Next',
+                    size: 14,
+                    fontWeight: FontWeight.w500,
+                    background: AppColors.lightGreen,
+                    onTap: () => value.nextPage(),
                   ),
-                )
-              : Row(
-                  // row alignment
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    // skip button
-                    GestureDetector(
-                      onTap: () => value.skipPage(),
-                      child: Text(
-                        // text transforming into uppercase
-                        'Skip'.toUpperCase(),
-                        // applying text style
-                        style: _textStyle(
-                          color: AppColors.textGrey,
-                        ),
-                      ),
-                    ),
-                    // next button
-                    CircleButton(
-                      text: 'Next',
-                      size: 14,
-                      fontWeight: FontWeight.w500,
-                      background: AppColors.lightGreen,
-                      onTap: () => value.nextPage(),
-                    ),
-                  ],
-                );
-        }
-      ),
+                ],
+              );
+      }),
     );
   }
 
