@@ -19,9 +19,8 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
         controller: context.read<OnboardingProvider>().pageController,
 
         // on page changed
-        onPageChanged: (index) {
-          Provider.of<OnboardingProvider>(context,listen:false).changePage(index);
-        },
+        onPageChanged:
+            context.read<OnboardingProvider>().changePage,
 
         // get onboard data length
         itemCount: context.read<OnboardingProvider>().dataLength,
@@ -96,6 +95,6 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
       GoogleFonts.poppins(
         fontSize: getHeight(context, size),
         fontWeight: weight,
-        color:AppColors.defaultBlack,
+        color: AppColors.defaultBlack,
       );
 }

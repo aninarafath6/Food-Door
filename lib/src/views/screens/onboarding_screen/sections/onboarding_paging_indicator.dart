@@ -8,9 +8,10 @@ import 'package:provider/src/provider.dart';
 // page indicator sild
 class OnboardingPagingIndicator extends StatelessWidget with Dimensions {
   const OnboardingPagingIndicator({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    // for monitor the rebuild of the page indicator
+    print('====onboarding indicator rebuild====');
     return Row(
       //row alignment
       mainAxisAlignment: MainAxisAlignment.center,

@@ -9,7 +9,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
-
+  // route name
+  static const routeName = '/splash';
+  
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -21,9 +23,11 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // redirecting to onboarding screen after 3 seconds
     Timer(
-        const Duration(milliseconds: 3000),
-        () => Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => OnboardingScreen())));
+      const Duration(milliseconds: 3000),
+      () => Navigator.of(context).pushReplacementNamed(
+        OnboardingScreen.routeName,
+      ),
+    );
     super.initState();
   }
 

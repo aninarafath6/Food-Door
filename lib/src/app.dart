@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_door/src/providers/onboarding_provider.dart';
-import 'package:food_door/src/views/screens/splash_screen/splash_screen.dart';
+import 'package:food_door/src/routes/app_routes.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,11 +13,13 @@ class MyApp extends StatelessWidget {
         // onboarding provider
         ChangeNotifierProvider(create: (context)=>OnboardingProvider()),
       ],
-      child: const MaterialApp(
+      child: MaterialApp(
         title: 'Food Door',
         debugShowCheckedModeBanner: false,
-        // initial page of the app
-        home: SplashScreen(),
+        // initial route
+        initialRoute: AppRoutes.initialRoute,
+        // routes
+        routes: AppRoutes.routes,
       ),
     );
   }

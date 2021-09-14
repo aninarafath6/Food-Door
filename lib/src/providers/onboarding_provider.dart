@@ -24,7 +24,7 @@ class OnboardingProvider with ChangeNotifier {
       // changing page to next
       pageController.nextPage(
         duration: const Duration(milliseconds: 300),
-        curve: Curves.ease,
+        curve: Curves.easeInOut,
       );
     }
     notifyListeners();
