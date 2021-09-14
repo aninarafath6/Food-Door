@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:food_door/src/constants/app_colors.dart';
 import 'package:food_door/src/constants/app_images.dart';
 import 'package:food_door/src/utils/dimensions.dart';
+import 'package:food_door/src/utils/navigation.dart';
 import 'package:food_door/src/views/screens/onboarding_screen/onboarding_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // redirecting to onboarding screen after 3 seconds
     Timer(
       const Duration(milliseconds: 3000),
-      () => Navigator.of(context).pushReplacementNamed(
+      () => context.toPushNamedReplacement(
         OnboardingScreen.routeName,
       ),
     );

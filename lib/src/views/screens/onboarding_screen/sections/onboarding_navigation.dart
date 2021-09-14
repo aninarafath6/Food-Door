@@ -3,6 +3,8 @@ import 'package:food_door/src/constants/app_colors.dart';
 import 'package:food_door/src/constants/app_sizes.dart';
 import 'package:food_door/src/providers/onboarding_provider.dart';
 import 'package:food_door/src/utils/dimensions.dart';
+import 'package:food_door/src/utils/navigation.dart';
+import 'package:food_door/src/views/screens/login_screen/login_screen.dart';
 import 'package:food_door/src/views/widgets/circle_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +40,10 @@ class OnboardingNavigation extends StatelessWidget with Dimensions {
                   backgroundColor:
                       MaterialStateProperty.all<Color>(AppColors.primary),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  // redirect into sign in screen
+                  context.toNamed(LoginScreen.routeName);
+                },
                 child: Text(
                   'Get Started',
                   // button text style
@@ -88,3 +93,4 @@ class OnboardingNavigation extends StatelessWidget with Dimensions {
     );
   }
 }
+
