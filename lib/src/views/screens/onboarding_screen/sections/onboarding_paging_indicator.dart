@@ -6,7 +6,7 @@ import 'package:food_door/src/utils/dimensions.dart';
 import 'package:provider/src/provider.dart';
 
 // page indicator sild
-class OnboardingPagingIndicator extends StatelessWidget with Dimensions {
+class OnboardingPagingIndicator extends StatelessWidget{
   const OnboardingPagingIndicator({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class OnboardingPagingIndicator extends StatelessWidget with Dimensions {
           // margins
           margin: EdgeInsets.symmetric(
             horizontal: 2,
-            vertical: getHeight(context, 3),
+            vertical: context.getHeight(3),
           ),
           height: 8,
           width: 20,

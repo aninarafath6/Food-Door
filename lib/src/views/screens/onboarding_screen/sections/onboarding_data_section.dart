@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 // ignore: implementation_imports
 import 'package:provider/src/provider.dart';
 
-class OnboardingDataSection extends StatelessWidget with Dimensions {
+class OnboardingDataSection extends StatelessWidget {
   const OnboardingDataSection({Key? key}) : super(key: key);
 
   @override
@@ -22,8 +22,7 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
         scrollBehavior: _PageScrollBehavior(),
 
         // on page changed
-        onPageChanged:
-            context.read<OnboardingProvider>().changePage,
+        onPageChanged: context.read<OnboardingProvider>().changePage,
 
         // get onboard data length
         itemCount: context.read<OnboardingProvider>().dataLength,
@@ -45,10 +44,10 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
                         .onboardingData[index]
                         .image!,
                     // takeing image width and height from dimensions
-                    height: getHeight(context, 30),
+                    height: context.getHeight(30),
                   ),
                 ),
-                spacing(context, height: 5),
+                context.spacing(height: 5),
                 // onboarding title
                 Text(
                   context
@@ -61,12 +60,11 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
                     weight: FontWeight.w500,
                   ),
                 ),
-                spacing(context, height: 3),
+                context.spacing(height: 3),
                 Padding(
                   padding: EdgeInsets.symmetric(
                     // giving padding to text from left and right side as 3% of screen width
-                    horizontal: getWidth(
-                      context,
+                    horizontal: context.getWidth(
                       0,
                     ),
                   ),
@@ -96,7 +94,7 @@ class OnboardingDataSection extends StatelessWidget with Dimensions {
   _textStyle(BuildContext context,
           {double? size = 1, FontWeight? weight = FontWeight.normal}) =>
       GoogleFonts.poppins(
-        fontSize: getHeight(context, size),
+        fontSize: context.getHeight(size),
         fontWeight: weight,
         color: AppColors.defaultBlack,
       );

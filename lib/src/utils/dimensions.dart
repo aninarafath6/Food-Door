@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class Dimensions {
+extension Dimensions on BuildContext{
   // taking the screen width and height 
-  double getHeight(BuildContext context, height) =>
-      (MediaQuery.of(context).size.height / 100) * height;
-  double getWidth(BuildContext context, width) =>
-      (MediaQuery.of(context).size.width / 100) * width;
+  double getHeight( height) =>
+      (MediaQuery.of(this).size.height / 100) * height;
+  double getWidth(width) =>
+      (MediaQuery.of(this).size.width / 100) * width;
 
 // spacing widget
-  SizedBox spacing(BuildContext context,
+  SizedBox spacing(
           {double? height = 0, double? width = 0}) =>
       SizedBox(
-        height: getHeight(context, height),
-        width: getWidth(context, width),
+        height: getHeight(height),
+        width: getWidth( width),
       );
 }

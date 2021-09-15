@@ -10,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 // ignore: implementation_imports
 
-class OnboardingNavigation extends StatelessWidget with Dimensions {
+class OnboardingNavigation extends StatelessWidget {
   const OnboardingNavigation({Key? key}) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class OnboardingNavigation extends StatelessWidget with Dimensions {
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all(
                     EdgeInsets.symmetric(
-                      horizontal: getWidth(context, 20),
+                      horizontal: context.getWidth(20),
                       vertical: 5,
                     ),
                   ),

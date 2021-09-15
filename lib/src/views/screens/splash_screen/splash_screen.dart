@@ -12,14 +12,12 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
   // route name
   static const routeName = '/splash';
-  
+
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  final Dimensions _dimensions = Dimensions();
-
   @override
   void initState() {
     // redirecting to onboarding screen after 3 seconds
@@ -45,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
           //background overlay image
           SizedBox(
             // taking the height of the screen
-            height: _dimensions.getHeight(context, 100),
+            height: context.getHeight(100),
             child: Image.asset(
               AppImages.OVERLAY_IMAGE,
               // fit: BoxFit.cover,
@@ -57,8 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Image.asset(
               AppImages.LOGO,
               // taking the 20% of the screen height
-              height: _dimensions.getHeight(
-                context,
+              height: context.getHeight(
                 20,
               ),
             ),
