@@ -12,7 +12,9 @@ class AppColors {
   // black color
   static const Color defaultBlack = Color(0xFF0E122B);
   // grey color
-  static const Color grey = Color(0xFFCDCDCD);
+  static const Color grey = Color(0xFFBCBCBC);
   // grey for text
   static const Color textGrey = Color(0xFFC4C4C4);
+  // border grey color
+  static const Color lightBorderGrey = Color(0x42C4C4C4);
 }

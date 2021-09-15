@@ -20,7 +20,7 @@ class OnboardingNavigation extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: AppSizes.DEFAULT_PADDING,
+        horizontal: AppSizes.defaultPadding,
         vertical: 20,
       ),
 

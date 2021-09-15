@@ -30,7 +30,7 @@ class OnboardingDataSection extends StatelessWidget {
         // get onboard data
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(AppSizes.DEFAULT_PADDING),
+            padding: const EdgeInsets.all(AppSizes.defaultPadding),
             child: Column(
               // main axis aligned into center
               mainAxisAlignment: MainAxisAlignment.end,
