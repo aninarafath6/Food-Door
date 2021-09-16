@@ -22,23 +22,18 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const <Widget>[
-        Spacer(),            // welcome message section
+            Spacer(), // welcome message section
             WelcomeMessageSection(),
             // input section
             InputSection(),
-        Spacer(),            // welcome message section
-        
+            Spacer(), // welcome message section
             // input action section
             InputActionSection(),
-        Spacer(),            // welcome message section
-        
-        
+            Spacer(), // welcome message section
             /// login actions
             ActionSection(),
-        Spacer(flex:3),            // welcome message section
-        
+            Spacer(flex: 3), // welcome message section
           ],
-        
         ),
       ),
     );

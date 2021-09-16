@@ -5,6 +5,8 @@ import 'package:food_door/src/constants/app_colors.dart';
 import 'package:food_door/src/constants/app_images.dart';
 import 'package:food_door/src/providers/login_provider.dart';
 import 'package:food_door/src/utils/dimensions.dart';
+import 'package:food_door/src/utils/navigation.dart';
+import 'package:food_door/src/views/screens/sign_up_screen/sign_up_screen.dart';
 import 'package:food_door/src/views/widgets/f_button.dart';
 import 'package:food_door/src/views/widgets/i_button.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,25 +31,28 @@ class ActionSection extends StatelessWidget {
         context.spacing(height: 4),
         // don't have an account redirect into sign up page
         // rich text
-        RichText(
-          // text span
-          text: TextSpan(
-            text: "Don't have an account?",
-            // text style
-            style: _textStyle(
-              color: AppColors.defaultBlack,
-            ),
+        GestureDetector(
+          onTap:()=>context.toNamed(SignUpScreen.routeName),
+          child: RichText(
             // text span
-            // sign up text
-            children: <TextSpan>[
-              TextSpan(
-                text: ' Signup',
-                // text style
-                style: _textStyle(
-                  color: AppColors.primary,
-                ),
+            text: TextSpan(
+              text: "Don't have an account?",
+              // text style
+              style: _textStyle(
+                color: AppColors.defaultBlack,
               ),
-            ],
+              // text span
+              // sign up text
+              children: <TextSpan>[
+                TextSpan(
+                  text: ' Signup',
+                  // text style
+                  style: _textStyle(
+                    color: AppColors.primary,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         // spacer
