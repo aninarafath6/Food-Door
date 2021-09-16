@@ -19,27 +19,26 @@ class LoginScreen extends StatelessWidget {
       body: Padding(
         padding:
             const EdgeInsets.symmetric(horizontal: AppSizes.defaultPadding),
-        child: SingleChildScrollView(
-          child: Column(
-            children: const <Widget>[
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const <Widget>[
         Spacer(),            // welcome message section
-              WelcomeMessageSection(),
-              // input section
-              InputSection(),
-        Spacer(),            // welcome message section
-        
-              // input action section
-              InputActionSection(),
+            WelcomeMessageSection(),
+            // input section
+            InputSection(),
         Spacer(),            // welcome message section
         
+            // input action section
+            InputActionSection(),
+        Spacer(),            // welcome message section
         
-              /// login actions
-              ActionSection(),
+        
+            /// login actions
+            ActionSection(),
         Spacer(flex:3),            // welcome message section
         
-            ],
+          ],
         
-          ),
         ),
       ),
     );
