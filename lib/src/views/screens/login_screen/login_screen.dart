@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_door/src/constants/app_sizes.dart';
 import 'package:food_door/src/views/screens/login_screen/sections/action_section.dart';
+import 'package:food_door/src/views/screens/login_screen/sections/input_action_section.dart';
 import 'package:food_door/src/views/screens/login_screen/sections/app_bar_section.dart';
 import 'package:food_door/src/views/screens/login_screen/sections/input_section.dart';
 import 'package:food_door/src/views/screens/login_screen/sections/welcome_message_section.dart';
@@ -29,21 +30,14 @@ class LoginScreen extends StatelessWidget {
               WelcomeMessageSection(),
               // input section
               InputSection(),
-              // action section
-             ActionSection()
+              // input action section
+              InputActionSection(),
+              /// login actions
+              ActionSection(),
             ],
           ),
         ),
       ),
     );
   }
-
-  // TextStyle _textStyle(BuildContext context,
-  //     {double? fontSize, FontWeight? fontWeight}) {
-  //   return GoogleFonts.poppins(
-  //     color: AppColors.defaultBlack,
-  //     fontSize: fontSize ?? 12,
-  //     fontWeight: fontWeight ?? FontWeight.normal,
-  //   );
-  // }
 }

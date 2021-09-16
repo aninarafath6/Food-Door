@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
             // taking the height of the screen
             height: context.getHeight(100),
             child: Image.asset(
-              AppImages.OVERLAY_IMAGE,
+              AppImages.overlayImage,
               // fit: BoxFit.cover,
               fit: BoxFit.fill,
             ),
@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
           // food door logo
           Center(
             child: Image.asset(
-              AppImages.LOGO,
+              AppImages.logo,
               // taking the 20% of the screen height
               height: context.getHeight(
                 20,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_door/src/providers/login_provider.dart';
 import 'package:food_door/src/providers/onboarding_provider.dart';
 import 'package:food_door/src/routes/app_routes.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       providers: [
         // onboarding provider
         ChangeNotifierProvider(create: (context)=>OnboardingProvider()),
+        ChangeNotifierProvider(create: (context)=>LoginProvider()),
       ],
       child: MaterialApp(
         title: 'Food Door',
