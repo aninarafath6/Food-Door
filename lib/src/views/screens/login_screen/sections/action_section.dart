@@ -52,15 +52,20 @@ class ActionSection extends StatelessWidget {
         ),
         // spacer
         context.spacing(height: 4),
+        // divider
         const Text('OR'),
+        // spacer
         context.spacing(height: 4),
-         IButton(
+        // facebook sign in button
+       const  IButton(
           label: 'Login with facebook',
           backgroundColor: AppColors.blue,
           image:AppImages.googleIcon,
         ),
+        // spacer
         context.spacing(height: 3),
-         IButton(
+        // google sign in button
+       const  IButton(
           label: 'Login with google',
           backgroundColor: AppColors.lightBlue,
           image:AppImages.googleIcon,
