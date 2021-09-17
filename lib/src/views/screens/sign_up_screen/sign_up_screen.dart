@@ -28,13 +28,14 @@ class SignUpScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const <Widget>[
-                  Spacer(), // welcome message section
+                  Spacer(flex:1), // welcome message section
                   SignUpWelcomeMessageSection(),
+                  Spacer(),
                   SignUpInputSection(),
                   Spacer(), // welcome message section
                   /// login actions
                   SignUpActionSection(),
-                  Spacer(flex: 3),
+                  Spacer(flex: 2),
                   // Spacer(),
                   // input section
                   // welcome message section

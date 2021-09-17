@@ -24,9 +24,16 @@ class SignUpWelcomeMessageSection extends StatelessWidget {
         ),
         // spacer
         context.spacing(height: 1),
-        Text(
-          'Enter your Name, Email and Password\nfor sign up.',
-          style: _textStyle(context, fontSize: context.getWidth(3.8)),
+        RichText(
+          text: TextSpan(
+              text: 'Enter your Name, Email and Password\nfor sign up.',
+              style: _textStyle(context, fontSize: context.getWidth(3.8)),
+              children: [
+                TextSpan(
+                  text: " Aready have an accound?",
+                  style: _textStyle(context, fontSize: context.getWidth(3.8),color:AppColors.primary),
+                ),
+              ]),
         ),
       ],
     );
@@ -34,9 +41,9 @@ class SignUpWelcomeMessageSection extends StatelessWidget {
 
   // text style
   TextStyle _textStyle(BuildContext context,
-      {double? fontSize, FontWeight? fontWeight}) {
+      {double? fontSize, FontWeight? fontWeight,Color? color = AppColors.defaultBlack}) {
     return GoogleFonts.poppins(
-      color: AppColors.defaultBlack,
+      color: color,
       fontSize: fontSize ?? 12,
       fontWeight: fontWeight ?? FontWeight.normal,
     );
