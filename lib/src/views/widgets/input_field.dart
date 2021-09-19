@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:food_door/src/constants/app_colors.dart';
 import 'package:food_door/src/constants/app_sizes.dart';
 import 'package:food_door/src/utils/dimensions.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class InputField extends StatelessWidget {
-  // 
+  //
   const InputField({
     Key? key,
     this.label,
@@ -28,7 +27,6 @@ class InputField extends StatelessWidget {
   final Function()? onTap;
   // text editing controller
   final TextEditingController? controller;
-
 
   @override
   Widget build(BuildContext context) {
@@ -71,13 +69,8 @@ class InputField extends StatelessWidget {
                 color: AppColors.grey,
               ),
             ),
-
-            // removed border
-            border: InputBorder.none,
             // label
             hintText: label!,
-            // hint style
-            hintStyle: GoogleFonts.poppins(color: AppColors.grey),
           ),
         ),
       ),

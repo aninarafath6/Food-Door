@@ -9,6 +9,17 @@ class Theming {
       scaffoldBackgroundColor: Colors.white,
       // app bar theme.
       appBarTheme: appBarTheme(),
+      // input theme.
+      inputDecorationTheme: inputDecorationTheme(),
+    );
+  }
+
+// input theme is a theme object that can be used to style the input.
+  InputDecorationTheme inputDecorationTheme() {
+    return InputDecorationTheme(
+      border: InputBorder.none,
+      hintStyle: GoogleFonts.poppins(color: AppColors.grey),
+      
     );
   }
 
