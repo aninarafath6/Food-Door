@@ -65,7 +65,7 @@ class ActionSection extends StatelessWidget {
        const  IButton(
           label: 'Login with facebook',
           backgroundColor: AppColors.blue,
-          image:AppImages.googleIcon,
+          image:AppImages.faceBookIcon,
         ),
         // spacer
         context.spacing(height: 3),

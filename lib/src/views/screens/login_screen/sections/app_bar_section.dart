@@ -18,23 +18,12 @@ AppBar loginAppBar(BuildContext context) {
         icon: const Icon(
           // arrow back ios icon
           Icons.arrow_back_ios,
-          // icon button color into black
-          color: AppColors.defaultBlack,
         ),
       ),
-      // removed the background color of the app bar
-      backgroundColor: Colors.transparent,
-      // removed app bar elevation shadow
-      elevation: 0,
-      // aligned the title of the app bar to the center
-      centerTitle: true,
       // title of the app bar
-      title: Text(
+      title:const  Text(
         'Sign In',
-        style: GoogleFonts.poppins(
-          color: AppColors.defaultBlack,
-          fontWeight: FontWeight.w500,
-        ),
+     
       ),
     );
   }

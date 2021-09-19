@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_door/src/constants/app_sizes.dart';
-import 'package:food_door/src/views/screens/login_screen/sections/action_section.dart';
-import 'package:food_door/src/views/screens/login_screen/sections/input_action_section.dart';
-import 'package:food_door/src/views/screens/login_screen/sections/input_section.dart';
 import 'package:food_door/src/views/screens/sign_up_screen/sections/sign_up_action_setion.dart';
 import 'package:food_door/src/views/screens/sign_up_screen/sections/sign_up_app_bar_section.dart';
 import 'package:food_door/src/views/screens/sign_up_screen/sections/sign_up_input_section.dart';

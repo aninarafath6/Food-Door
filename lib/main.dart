@@ -3,10 +3,3 @@ import 'package:food_door/src/app.dart';
   void main() {
   runApp(const MyApp());
 }
-
-
-
-  
-
-
-

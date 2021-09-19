@@ -52,7 +52,13 @@ class IButton extends StatelessWidget {
                         BorderRadius.circular(AppSizes.defaultBorderRadius - 3),
                   ),
                   child: Center(
-                    child: Image.asset(image!),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Image.asset(
+                        image!,
+                        fit:BoxFit.contain,
+                      ),
+                    ),
                   ),
                 )),
             context.spacing(width: 5),
