@@ -11,7 +11,5 @@ To your specific example it would look something like this:
 
 
 
-<img src='https://user-images.githubusercontent.com/65447144/134810615-13fd2d43-7910-46d7-a0e6-1ddb910a4f94.jpeg' width="200" alt='splash screen '> 
-# splash screen
-<img src='https://user-images.githubusercontent.com/65447144/134810627-90b7e0bf-224f-4ae9-b882-3d7d0dbf966d.jpeg' width="200" alt='splash screen '>
-# Onboarding Screen 1
+| <img align="left" alt="Splash Screen" src="https://raw.githubusercontent.com/JobinBiju/Taskly/main/assets/readmeFiles/splash.jpg" width="250px" /> | <img align="left" alt="Welcome Screen" src="https://raw.githubusercontent.com/JobinBiju/Taskly/main/assets/readmeFiles/welcome.jpg" width="250px" /> | <img align="left" alt="Login Screen" src="https://raw.githubusercontent.com/JobinBiju/Taskly/main/assets/readmeFiles/login.jpg" width="250px" /> | <img align="left" alt="Dashboard" src="https://raw.githubusercontent.com/JobinBiju/Taskly/main/assets/readmeFiles/yellowLight.jpg" width="250px" /> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
