@@ -25,9 +25,15 @@ class SignUpActionSection extends StatelessWidget {
         // login action button
         FButton(
           // text label
-          label: 'Sign Up',
-          // login function
+          label:
+              context.watch<SignUpProvider>().loading ? 'Loading...' : 'Signup',
+          // login function7
           onPress: context.read<SignUpProvider>().signUp,
+        ),
+
+        Column(
+          children: List.generate(context.read<SignUpProvider>().errors.length,
+              (index) => const Text('dfdf')),
         ),
         context.spacing(height: 4),
         // spacer

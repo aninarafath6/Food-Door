@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_door/src/models/user_model.dart';
+import 'package:food_door/src/services/auth_services.dart';
 
 // signUp provider
 class SignUpProvider with ChangeNotifier {
@@ -10,7 +12,16 @@ class SignUpProvider with ChangeNotifier {
   final TextEditingController emailController = TextEditingController();
 
   // remember me checkbox
-  bool remember = false;
+  bool remember = true;
+
+  bool loading = false;
+
+  void updateLoading(bool status) {
+    loading = status;
+    notifyListeners();
+  }
+
+  List<String> errors = [];
 
   // on toggle remember me
   void toggleRemember(bool _remember) {
@@ -18,9 +29,27 @@ class SignUpProvider with ChangeNotifier {
   }
 
   // login
-  void signUp() {
-    print(userNameController.text);
-    print(passwordController.text);
-    print(emailController.text);
+  void signUp() async {
+    if (emailController.text != null &&
+        userNameController.text != null &&
+        passwordController.text != null) {
+      if (passwordController.text.length >= 8) {
+        updateLoading(true);
+        bool response = await AuthServices().signUp(
+          email: emailController.text,
+          password: passwordController.text,
+          username: userNameController.text,
+        );
+        updateLoading(false);
+      } else {
+        if (!errors.contains('password must be 8 charecters')) {
+          errors.add('password must be 8 charecters');
+        }
+        notifyListeners();
+      }
+    } else {
+      errors.add('please fill all inputs');
+      notifyListeners();
+    }
   }
 }
